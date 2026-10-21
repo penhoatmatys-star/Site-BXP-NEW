@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BXP – Connecting Sport. Creating Shared Value.</title>
+  <meta name="description" content="BXP is an international Facilitator Office for the professional sports industry. We connect clubs, athletes, companies and institutions through smart, independent, value-driven solutions." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══ LOADER ══════════════════════════════════════════ -->
+  <!-- ══ NAVBAR ═══════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="BXP Home">
+        <img src="assets/logo.png" alt="BXP" class="nav-logo-img" width="100" height="38" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link magnetic-text" data-i18n="about.label">WHO WE ARE</a></li>
+        <li><a href="#facilitate" class="nav-link magnetic-text" data-i18n="nav.facilitate">What we do</a></li>
+        <li><a href="#process"   class="nav-link magnetic-text" data-i18n="nav.process">Process</a></li>
+        <li><a href="#gallery"   class="nav-link magnetic-text" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="#mission"   class="nav-link magnetic-text" data-i18n="mission.label">OUR MISSION</a></li>
+        <li><a href="#contact"   class="nav-link magnetic-text" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+          <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+        </div>
+        <a href="#contact" class="nav-cta magnetic" data-i18n="nav.cta">
+          <span>Get in Touch</span>
+        </a>
+      </div>
+      <button type="button" class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <a href="#about" class="nav-mobile-link" data-i18n="about.label">WHO WE ARE</a>
+      <a href="#facilitate" class="nav-mobile-link" data-i18n="nav.facilitate">What we do</a>
+      <a href="#process" class="nav-mobile-link" data-i18n="nav.process">Process</a>
+      <a href="#gallery" class="nav-mobile-link" data-i18n="nav.gallery">Gallery</a>
+      <a href="#mission" class="nav-mobile-link" data-i18n="mission.label">OUR MISSION</a>
+      <a href="#contact" class="nav-mobile-link" data-i18n="nav.contact">Contact</a>
+      <div class="lang-switcher" style="justify-content:center;margin-top:16px">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ═════════════════════════════════════════════ -->
+  <section id="hero" data-photo-hero="true">
+    <!-- Background image with parallax -->
+    <div class="hero-bg" id="hero-bg"></div>
+    <!-- Cinematic overlays -->
+    <div class="hero-overlay"></div>
+    <div class="hero-vignette"></div>
+    <!-- Animated grain noise -->
+    <canvas id="grain-canvas" aria-hidden="true"></canvas>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <div class="hero-eyebrow" aria-hidden="true">
+        <div class="eyebrow-line"></div>
+        <span data-i18n="hero.eyebrow">International Facilitator Office</span>
+        <div class="eyebrow-line"></div>
+      </div>
+      <h1 class="hero-title" aria-label="BXP – Connecting Sport. Creating Shared Value.">
+        <div class="hero-line">
+          <img src="assets/logo-transparent.png" alt="BxP" class="hero-logo-img" width="548" height="208" fetchpriority="high" />
+        </div>
+        <div class="hero-tagline-wrap hero-tagline-stack">
+          <span class="hero-best-for" data-i18n="hero.best_for">Connecting Sport.</span>
+          <span class="hero-performance" data-i18n="hero.performance">Creating Shared Value.</span>
+        </div>
+      </h1>
+      <p class="hero-sub split-lines" data-i18n="hero.sub">BXP is an international Facilitator Office for the professional sports industry. We connect clubs, athletes, companies, institutions and sports stakeholders through smart, independent, value-driven solutions.</p>
+      <div class="hero-actions">
+        <a href="#process" class="btn-primary magnetic">
+          <span class="btn-text" data-i18n="hero.cta1">Discover</span>
+          <span class="btn-shine"></span>
+        </a>
+        <a href="form-club.html" class="btn-ghost magnetic hero-form-btn">
+          <span class="btn-text">Club Contact Form</span>
+        </a>
+        <a href="form-athlete.html" class="btn-ghost magnetic hero-form-btn hero-form-btn--athlete">
+          <span class="btn-text">Athlete Contact Form</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span data-i18n="hero.scroll">Scroll</span>
+    </div>
+
+    <!-- Bottom gradient -->
+    <div class="hero-bottom-fade"></div>
+  </section>
+
+  <!-- ══ STATS ═════════════════════════════════════════════ -->
+  <section id="stats">
+    <div class="stats-inner">
+      <div class="stat-item" data-delay="0">
+        <div class="stat-num-wrap">
+          <span class="stat-num" data-count="50">0</span>
+          <span class="stat-plus">+</span>
+        </div>
+        <div class="stat-divider"></div>
+        <span class="stat-label" data-i18n="stats.clubs">Clubs</span>
+      </div>
+      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat-item" data-delay="100">
+        <div class="stat-num-wrap">
+          <span class="stat-num" data-count="200">0</span>
+          <span class="stat-plus">+</span>
+        </div>
+        <div class="stat-divider"></div>
+        <span class="stat-label" data-i18n="stats.athletes">Athletes</span>
+      </div>
+      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat-item" data-delay="200">
+        <div class="stat-num-wrap">
+          <span class="stat-num" data-count="10">0</span>
+          <span class="stat-plus">+</span>
+        </div>
+        <div class="stat-divider"></div>
+        <span class="stat-label" data-i18n="stats.countries">Countries</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ INTRO SPLIT ════════════════════════════════════════ -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-col about-col-text">
+        <span class="section-label" data-i18n="about.label">WHO WE ARE</span>
+        <h2 class="section-title split-lines" data-i18n="about.title">Sport. Business.<br/>International relations.</h2>
+        <p class="about-desc" data-i18n="about.desc">BXP operates at the intersection of professional sport, business development and international relations. We support sports industry stakeholders in identifying the right opportunities, building qualified relationships and turning potential into concrete projects. Our approach is smart, direct and practical: we simplify complexity, open qualified channels and help the different players of the sports industry collaborate clearly and effectively.</p>
+        <p class="about-desc about-neutral" data-i18n="about.neutral">BXP acts as a neutral facilitator. We do not operate with conflicts of interest. We create value when clubs, athletes, companies and partners can grow together.</p>
+        <div class="about-badges">
+          <div class="about-badge silver-badge">
+            <span data-i18n="intro.club">CLUB</span>
+          </div>
+          <div class="about-badge-sep" aria-hidden="true">×</div>
+          <div class="about-badge gold-badge">
+            <span data-i18n="intro.athlete">ATHLETE</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-col about-col-visual">
+        <div class="about-split">
+          <div class="about-split-panel about-split-club">
+            <div class="about-split-icon">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <rect x="3" y="6" width="26" height="21" rx="2" stroke="#B8BEC8" stroke-width="1.5"/>
+                <path d="M3 14h26" stroke="#B8BEC8" stroke-width="1.5"/>
+                <circle cx="11" cy="20" r="2" fill="#B8BEC8"/>
+                <circle cx="21" cy="20" r="2" fill="#B8BEC8"/>
+              </svg>
+            </div>
+            <div class="about-flow about-flow--silver" aria-hidden="true">
+              <span class="flow-node"></span>
+              <span class="flow-node"></span>
+              <span class="flow-node"></span>
+              <span class="flow-pulse"></span>
+            </div>
+            <h3 class="about-split-label silver-text" data-i18n="intro.club">CLUB</h3>
+            <p class="about-split-desc" data-i18n="intro.club.desc">Strategic consulting for sports organizations seeking measurable growth.</p>
+            <ul class="about-split-list">
+              <li data-i18n="about.club.li1">Performance analysis</li>
+              <li data-i18n="about.club.li2">Strategic planning</li>
+              <li data-i18n="about.club.li3">Talent optimization</li>
+            </ul>
+          </div>
+          <div class="about-split-divider" aria-hidden="true"></div>
+          <div class="about-split-panel about-split-athlete">
+            <div class="about-split-icon">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <circle cx="16" cy="8" r="4.5" stroke="#D4A820" stroke-width="1.5"/>
+                <path d="M8 30c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#D4A820" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M16 22v-6M13 18.5l3-2.5 3 2.5" stroke="#D4A820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="about-flow about-flow--gold" aria-hidden="true">
+              <span class="flow-node"></span>
+              <span class="flow-node"></span>
+              <span class="flow-node"></span>
+              <span class="flow-pulse"></span>
+            </div>
+            <h3 class="about-split-label gold-text" data-i18n="intro.athlete">ATHLETE</h3>
+            <p class="about-split-desc" data-i18n="intro.athlete.desc">Personalized development for athletes aiming for the highest level.</p>
+            <ul class="about-split-list about-split-list--gold">
+              <li data-i18n="about.athlete.li1">Career mapping</li>
+              <li data-i18n="about.athlete.li2">Mental performance</li>
+              <li data-i18n="about.athlete.li3">Physical peak</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FACILITATE ═════════════════════════════════════════ -->
+  <section id="facilitate">
+    <canvas class="fac-net" aria-hidden="true"></canvas>
+    <div class="section-header">
+      <span class="section-label" data-i18n="fac.label">WHAT WE FACILITATE</span>
+      <h2 class="section-title split-lines" data-i18n="fac.title">Five fields.<br/>One ecosystem.</h2>
+    </div>
+
+    <div class="fac-grid">
+
+      <article class="fac-card">
+        <div class="fac-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect x="3" y="6" width="26" height="21" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 14h26" stroke="currentColor" stroke-width="1.5"/><circle cx="11" cy="20" r="2" fill="currentColor"/><circle cx="21" cy="20" r="2" fill="currentColor"/></svg>
+        </div>
+        <span class="fac-num" aria-hidden="true">01</span>
+        <h3 class="fac-title" data-i18n="fac.clubs.title">Clubs &amp; Sports Organizations</h3>
+        <p class="fac-text" data-i18n="fac.clubs.text">BXP supports clubs and sports organizations in developing international relationships, identifying strategic opportunities and connecting with selected partners. We facilitate projects related to sporting development, commercial growth, international exposure, operational support and institutional positioning.</p>
+      </article>
+
+      <article class="fac-card">
+        <div class="fac-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="8" r="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M8 30c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <span class="fac-num" aria-hidden="true">02</span>
+        <h3 class="fac-title" data-i18n="fac.athletes.title">Athletes &amp; Professionals</h3>
+        <p class="fac-text" data-i18n="fac.athletes.text">BXP helps athletes and professional coaches access new contexts, evaluate opportunities and connect with clubs, academies and international sports networks. The goal is to create realistic, coherent and valuable paths, aligned with each professional's profile and ambitions. We facilitate player transfers during market windows, in dialogue with their respective representatives (clubs, agents, family).</p>
+      </article>
+
+      <article class="fac-card">
+        <div class="fac-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><path d="M4 27V11l8-6 8 6v16" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M20 15h8v12" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 27h28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 14h6M9 18h6M9 22h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <span class="fac-num" aria-hidden="true">03</span>
+        <h3 class="fac-title" data-i18n="fac.brands.title">Companies &amp; Brands</h3>
+        <p class="fac-text" data-i18n="fac.brands.text">BXP connects companies and brands for commercial partnerships, activations and strategic positioning.</p>
+      </article>
+
+      <article class="fac-card">
+        <div class="fac-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><path d="M16 4l12 6v2H4v-2l12-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M7 12v10M13 12v10M19 12v10M25 12v10" stroke="currentColor" stroke-width="1.5"/><path d="M4 26h24v2H4v-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="fac-num" aria-hidden="true">04</span>
+        <h3 class="fac-title" data-i18n="fac.invest.title">Investors &amp; Institutions</h3>
+        <p class="fac-text" data-i18n="fac.invest.text">BXP facilitates dialogue between institutions and sports organizations, supporting the development of projects related to clubs, academies, events, infrastructure and international expansion.</p>
+      </article>
+
+      <article class="fac-card fac-card--wide">
+        <span class="fac-num" aria-hidden="true">05</span>
+        <div class="fac-icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.5"/><path d="M16 4c-3 3.5-4.5 7.5-4.5 12S13 24.5 16 28c3-3.5 4.5-7.5 4.5-12S19 7.5 16 4z" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 12h23M4.5 20h23" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="fac-wide-body">
+          <h3 class="fac-title" data-i18n="fac.events.title">Sports Events</h3>
+          <p class="fac-text" data-i18n="fac.events.text">BXP facilitates the creation, organization and development of sports events with an international perspective. We support events designed to connect clubs, athletes, companies, sponsors, institutions and professional stakeholders. Our role can include concept development, partner activation, club and athlete involvement, commercial opportunities, international networking and operational coordination.</p>
+          <p class="fac-note" data-i18n="fac.events.note">Sports events are not just competitions or showcases. They are platforms to generate visibility, relationships and shared value.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ══ PROCESS ════════════════════════════════════════════ -->
+  <section id="process">
+    <video class="process-ball-video" autoplay loop muted playsinline preload="metadata" aria-hidden="true">
+      <source src="0608.mp4" type="video/mp4">
+    </video>
+    <div class="section-header">
+      <span class="section-label" data-i18n="process.label">HOW WE WORK</span>
+      <h2 class="section-title split-lines" data-i18n="process.title">Our Process</h2>
+    </div>
+
+    <div class="proc-wrap">
+
+      <!-- Track switcher -->
+      <div class="proc-switch" role="tablist" aria-label="Choose track">
+        <button type="button" class="proc-tab active" role="tab" aria-selected="true" data-track="club" data-i18n="step.club">CLUB</button>
+        <button type="button" class="proc-tab" role="tab" aria-selected="false" data-track="athlete" data-i18n="step.athlete">ATHLETE</button>
+        <span class="proc-pill" aria-hidden="true"></span>
+      </div>
+
+      <!-- Accordion -->
+      <div class="proc-acc" id="proc-acc" data-track="club">
+
+        <div class="proc-item is-open" data-step="1">
+          <button type="button" class="proc-head" aria-expanded="true" aria-controls="proc-body-1" id="proc-head-1">
+            <span class="proc-num" aria-hidden="true">01</span>
+            <span class="proc-title" data-i18n="step1.club.title">Meeting &amp; Check-up</span>
+            <span class="proc-chevron" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="proc-body" id="proc-body-1" role="region" aria-labelledby="proc-head-1">
+            <div class="proc-body-inner">
+              <p class="proc-text" data-i18n="step1.club.text">BXP analyzes the club's starting point, understanding objectives, priorities and growth potential. This phase creates a clear base to build a truly tailored path.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proc-item" data-step="2">
+          <button type="button" class="proc-head" aria-expanded="false" aria-controls="proc-body-2" id="proc-head-2">
+            <span class="proc-num" aria-hidden="true">02</span>
+            <span class="proc-title" data-i18n="step2.club.title">Club Report</span>
+            <span class="proc-chevron" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="proc-body" id="proc-body-2" role="region" aria-labelledby="proc-head-2">
+            <div class="proc-body-inner">
+              <p class="proc-text" data-i18n="step2.club.text">BXP produces a report highlighting strengths, areas for improvement and operational priorities. A concrete tool to help the club make more informed decisions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proc-item" data-step="3">
+          <button type="button" class="proc-head" aria-expanded="false" aria-controls="proc-body-3" id="proc-head-3">
+            <span class="proc-num" aria-hidden="true">03</span>
+            <span class="proc-title" data-i18n="step3.club.title">Club Strategy</span>
+            <span class="proc-chevron" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="proc-body" id="proc-body-3" role="region" aria-labelledby="proc-head-3">
+            <div class="proc-body-inner">
+              <p class="proc-text" data-i18n="step3.club.text">BXP builds a personalized strategy, activating only the interventions truly useful to the club. The goal is to generate sporting, organizational and professional value.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proc-item" data-step="4">
+          <button type="button" class="proc-head" aria-expanded="false" aria-controls="proc-body-4" id="proc-head-4">
+            <span class="proc-num" aria-hidden="true">04</span>
+            <span class="proc-title" data-i18n="step4.club.title">Follow-up</span>
+            <span class="proc-chevron" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="proc-body" id="proc-body-4" role="region" aria-labelledby="proc-head-4">
+            <div class="proc-body-inner">
+              <p class="proc-text" data-i18n="step4.club.text">BXP accompanies the club throughout the journey, monitoring progress, results and evolution. Growth becomes a continuous, measurable and sustainable process.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ GALLERY ════════════════════════════════════════════ -->
+  <section id="gallery">
+    <div class="section-header">
+      <span class="section-label" data-i18n="gallery.label">PORTFOLIO</span>
+      <h2 class="section-title split-lines" data-i18n="gallery.title">Our Experiences</h2>
+    </div>
+
+    <div class="gallery-filters" role="group" aria-label="Gallery filter">
+      <button type="button" class="filter-btn active" data-filter="all"     data-i18n="gallery.all">All</button>
+      <button type="button" class="filter-btn"        data-filter="club"    data-i18n="gallery.club">Club</button>
+      <button type="button" class="filter-btn"        data-filter="athlete" data-i18n="gallery.athlete">Athlete</button>
+    </div>
+
+    <!-- ── Carousel ────────────────────────────────────── -->
+    <div class="gc-root" id="gallery-carousel" aria-label="Gallery carousel">
+
+      <div class="gc-track" id="gc-track">
+
+        <article class="gc-card" data-cat="club" data-location="Real Madrid" data-img="assets/club/Real%20Madrid.jpeg" tabindex="0" role="button" aria-label="Club – Real Madrid">
+          <div class="gc-img" style="background-image:url('assets/club/Real%20Madrid.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Real Madrid</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="FC Barcelona" data-img="assets/club/Barcelona.jpeg" tabindex="0" role="button" aria-label="Club – FC Barcelona">
+          <div class="gc-img" style="background-image:url('assets/club/Barcelona.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">FC Barcelona</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Juventus" data-img="assets/club/Juventus.jpeg" tabindex="0" role="button" aria-label="Club – Juventus">
+          <div class="gc-img" style="background-image:url('assets/club/Juventus.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Juventus</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Paris Saint-Germain" data-img="assets/club/Psg.jpeg" tabindex="0" role="button" aria-label="Club – Paris Saint-Germain">
+          <div class="gc-img" style="background-image:url('assets/club/Psg.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Paris Saint-Germain</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Ajax" data-img="assets/club/Ajax.jpeg" tabindex="0" role="button" aria-label="Club – Ajax">
+          <div class="gc-img" style="background-image:url('assets/club/Ajax.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Ajax</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Atlético Madrid" data-img="assets/club/Atl%C3%A9tico%20Madrid.jpeg" tabindex="0" role="button" aria-label="Club – Atlético Madrid">
+          <div class="gc-img" style="background-image:url('assets/club/Atl%C3%A9tico%20Madrid.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Atlético Madrid</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Sevilla" data-img="assets/club/Sevilla.jpeg" tabindex="0" role="button" aria-label="Club – Sevilla">
+          <div class="gc-img" style="background-image:url('assets/club/Sevilla.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Sevilla</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Crotone" data-img="assets/club/Crotone.jpeg" tabindex="0" role="button" aria-label="Club – Crotone">
+          <div class="gc-img" style="background-image:url('assets/club/Crotone.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Crotone</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Siena" data-img="assets/club/Siena.jpeg" tabindex="0" role="button" aria-label="Club – Siena">
+          <div class="gc-img" style="background-image:url('assets/club/Siena.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Siena</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Debrecen" data-img="assets/club/Drebecen%20%282%29.jpeg" tabindex="0" role="button" aria-label="Club – Debrecen">
+          <div class="gc-img" style="background-image:url('assets/club/Drebecen%20%282%29.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Debrecen</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Kisvárda" data-img="assets/club/Kisvarda%20Ungheria.jpeg" tabindex="0" role="button" aria-label="Club – Kisvárda">
+          <div class="gc-img" style="background-image:url('assets/club/Kisvarda%20Ungheria.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Kisvárda</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="AD Alcorcón" data-img="assets/club/Ad%20alcorcon.jpeg" tabindex="0" role="button" aria-label="Club – AD Alcorcón">
+          <div class="gc-img" style="background-image:url('assets/club/Ad%20alcorcon.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">AD Alcorcón</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Bucarest" data-img="assets/club/Bucarest.jpeg" tabindex="0" role="button" aria-label="Club – Bucarest">
+          <div class="gc-img" style="background-image:url('assets/club/Bucarest.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Bucarest</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Piatra-Neamț" data-img="assets/club/Piatra-Neamt.jpeg" tabindex="0" role="button" aria-label="Club – Piatra-Neamț">
+          <div class="gc-img" style="background-image:url('assets/club/Piatra-Neamt.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Piatra-Neamț</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Priština" data-img="assets/club/Pristina%20Kossovo.jpeg" tabindex="0" role="button" aria-label="Club – Priština">
+          <div class="gc-img" style="background-image:url('assets/club/Pristina%20Kossovo.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Priština</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Olhão" data-img="assets/club/Olhao%20Portugal.jpeg" tabindex="0" role="button" aria-label="Club – Olhão">
+          <div class="gc-img" style="background-image:url('assets/club/Olhao%20Portugal.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Olhão</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Luxembourg" data-img="assets/club/Luxembourg.jpeg" tabindex="0" role="button" aria-label="Club – Luxembourg">
+          <div class="gc-img" style="background-image:url('assets/club/Luxembourg.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Luxembourg</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="club" data-location="Atlético" data-img="assets/club/Atl%C3%A9tico.jpeg" tabindex="0" role="button" aria-label="Club – Atlético">
+          <div class="gc-img" style="background-image:url('assets/club/Atl%C3%A9tico.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag silver-text" data-i18n="gallery.club_tag">Club</span>
+            <span class="gc-loc">Atlético</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="athlete" data-location="Az Picerno" data-img="assets/athlete/Az%20Picerno%20joueur.jpeg" tabindex="0" role="button" aria-label="Athlete – Az Picerno">
+          <div class="gc-img" style="background-image:url('assets/athlete/Az%20Picerno%20joueur.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag gold-text" data-i18n="gallery.athlete_tag">Athlete</span>
+            <span class="gc-loc">Az Picerno</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="athlete" data-location="Frank Feltscher" data-img="assets/Athlete/DVSC.jpeg" tabindex="0" role="button" aria-label="Athlete – Frank Feltscher">
+          <div class="gc-img" style="background-image:url('assets/Athlete/DVSC.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag gold-text" data-i18n="gallery.athlete_tag">Athlete</span>
+            <span class="gc-loc">Frank Feltscher</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="athlete" data-location="Priština" data-img="assets/athlete/Pr%C3%ADstina%20-Kossovo.jpeg" tabindex="0" role="button" aria-label="Athlete – Priština">
+          <div class="gc-img" style="background-image:url('assets/athlete/Pr%C3%ADstina%20-Kossovo.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag gold-text" data-i18n="gallery.athlete_tag">Athlete</span>
+            <span class="gc-loc">Priština</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="athlete" data-location="Olhão" data-img="assets/athlete/athlete.jpeg" tabindex="0" role="button" aria-label="Athlete – Olhão">
+          <div class="gc-img" style="background-image:url('assets/athlete/athlete.jpeg')"></div>
+          <div class="gc-info">
+            <span class="gc-tag gold-text" data-i18n="gallery.athlete_tag">Athlete</span>
+            <span class="gc-loc">Olhão</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M8 5.5v5M5.5 8h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+        </article>
+
+        <article class="gc-card" data-cat="athlete" data-location="Training" data-video="assets/athlete/Training.mp4" tabindex="0" role="button" aria-label="Athlete – Training video">
+          <video class="gc-img gc-vid" autoplay muted loop playsinline preload="metadata">
+            <source src="assets/athlete/Training.mp4" type="video/mp4">
+          </video>
+          <div class="gc-info">
+            <span class="gc-tag gold-text" data-i18n="gallery.athlete_tag">Athlete</span>
+            <span class="gc-loc">Training</span>
+          </div>
+          <div class="gc-view-hint" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 4l10 6-10 6z" fill="currentColor"/></svg>
+          </div>
+        </article>
+
+      </div><!-- /gc-track -->
+
+      <!-- Arrows -->
+      <button type="button" class="gc-arrow gc-arrow-prev" id="gc-prev" aria-label="Previous slide">
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" aria-hidden="true"><path d="M8.5 1.5L2 8l6.5 6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" class="gc-arrow gc-arrow-next" id="gc-next" aria-label="Next slide">
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" aria-hidden="true"><path d="M1.5 1.5L8 8l-6.5 6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <!-- Progress bar + counter -->
+      <div class="gc-footer">
+        <div class="gc-progress"><div class="gc-progress-bar" id="gc-progress-bar"></div></div>
+        <span class="gc-counter" id="gc-counter">01 / 13</span>
+      </div>
+
+    </div><!-- /gc-root -->
+
+    <!-- ── Lightbox ─────────────────────────────────────── -->
+    <div class="gc-lightbox" id="gc-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image viewer" style="display:none">
+      <div class="gc-lb-bg"      id="gc-lb-bg"></div>
+      <div class="gc-lb-overlay" id="gc-lb-overlay"></div>
+      <div class="gc-lb-content">
+        <div class="gc-lb-img" id="gc-lb-img"></div>
+        <div class="gc-lb-meta">
+          <span class="gc-lb-tag"   id="gc-lb-tag"></span>
+          <h3  class="gc-lb-title"  id="gc-lb-title"></h3>
+          <span class="gc-lb-ctr"   id="gc-lb-counter"></span>
+        </div>
+      </div>
+      <button type="button" class="gc-lb-close" id="gc-lb-close" aria-label="Close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <button type="button" class="gc-lb-prev" id="gc-lb-prev" aria-label="Previous image">
+        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" aria-hidden="true"><path d="M8.5 1.5L2 9l6.5 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" class="gc-lb-next" id="gc-lb-next" aria-label="Next image">
+        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" aria-hidden="true"><path d="M1.5 1.5L8 9l-6.5 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+  </section>
+
+  <!-- ══ MISSION ════════════════════════════════════════════ -->
+  <section id="mission">
+    <!-- Background video -->
+    <video class="mission-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+      <source src="assets/vid%C3%A9o%20background.mp4" type="video/mp4" />
+    </video>
+    <div class="mission-video-overlay" aria-hidden="true"></div>
+    <div class="mission-inner">
+      <div class="section-header">
+        <span class="section-label" data-i18n="mission.label">OUR MISSION</span>
+        <h2 class="section-title split-lines" data-i18n="mission.title">Why we exist</h2>
+      </div>
+      <p class="mission-text" data-i18n="mission.text">BXP was created to make the professional sports industry more connected, accessible and efficient. We believe the best opportunities arise when the right people, clubs, companies and institutions are brought together in the right context. Our mission is to facilitate these connections with independence, transparency and strategic clarity.</p>
+
+      <div class="mission-manifesto">
+        <div class="manifesto-line" aria-hidden="true"></div>
+        <p class="manifesto-text" data-i18n="mission.manifesto">No conflicts of interest.<br/>Only shared value.</p>
+        <div class="manifesto-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="mission-cols">
+        <div class="mission-col">
+          <h3 class="mission-col-title gold-text" data-i18n="noconflict.title">No Conflicts of Interest</h3>
+          <p class="mission-col-text" data-i18n="noconflict.text">BXP operates as an independent facilitator. We do not work to create advantages for one party at the expense of another. We work to identify common ground, align interests and build solutions capable of generating value for all parties involved. This is the foundation of our model.</p>
+        </div>
+        <div class="mission-col-divider" aria-hidden="true"></div>
+        <div class="mission-col">
+          <h3 class="mission-col-title silver-text" data-i18n="why.title">Why BXP</h3>
+          <p class="mission-col-text" data-i18n="why.text">BXP is designed for an international sports industry that moves fast, demands trust and depends on the quality of relationships. We offer a smart and effective access point for stakeholders who want to navigate the professional sports ecosystem with clarity. We combine international connections, sports industry knowledge and executive capability to facilitate real opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="section-header">
+        <span class="section-label" data-i18n="contact.label">GET IN TOUCH</span>
+        <h2 class="section-title split-lines" data-i18n="contact.title">Contact Us</h2>
+        <p class="contact-intro" data-i18n="contact.intro">We connect the right people, projects and opportunities.</p>
+      </div>
+      <!-- Dedicated intake forms -->
+      <div class="contact-forms contact-forms--solo">
+        <p class="contact-forms-label" data-i18n="contact.forms.label">Detailed intake forms</p>
+        <div class="contact-forms-btns">
+          <a href="form-club.html" class="cform-btn cform-btn--club">
+            <span class="cform-btn-tag silver-text" data-i18n="intro.club">CLUB</span>
+            <span class="cform-btn-title" data-i18n="contact.forms.club">Club Contact Form</span>
+            <span class="cform-btn-desc" data-i18n="contact.forms.club_desc">Preliminary assessment for clubs &amp; sports organizations.</span>
+            <span class="cform-btn-arrow" aria-hidden="true">
+              <svg width="22" height="14" viewBox="0 0 22 14" fill="none"><path d="M1 7h19M14.5 1.5L20.5 7l-6 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <a href="form-athlete.html" class="cform-btn cform-btn--athlete">
+            <span class="cform-btn-tag gold-text" data-i18n="intro.athlete">ATHLETE</span>
+            <span class="cform-btn-title" data-i18n="contact.forms.athlete">Athlete Contact Form</span>
+            <span class="cform-btn-desc" data-i18n="contact.forms.athlete_desc">Share your sporting profile, objectives and media.</span>
+            <span class="cform-btn-arrow" aria-hidden="true">
+              <svg width="22" height="14" viewBox="0 0 22 14" fill="none"><path d="M1 7h19M14.5 1.5L20.5 7l-6 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Direct contact -->
+      <div class="contact-direct">
+        <span class="contact-direct-label" data-i18n="contact.direct">Direct Contact</span>
+        <div class="contact-links">
+          <a href="mailto:bp@bxpsport.com" class="c-link magnetic">
+            <div class="c-link-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2" y="4" width="16" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <span class="c-link-type" data-i18n="contact.email">Email</span>
+              <span class="c-link-val">bp@bxpsport.com</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CITIES BAND ════════════════════════════════════════ -->
+  <div class="cities-band" aria-label="BXP présence mondiale">
+    <div class="cities-track" aria-hidden="true">
+      <span class="cities-run">
+        KOSOVO <span class="cb-dot">◆</span>
+        ABU DHABI <span class="cb-dot">◆</span>
+        DUBAI <span class="cb-dot">◆</span>
+        BARCELONA <span class="cb-dot">◆</span>
+        MADRID <span class="cb-dot">◆</span>
+        PALERMO <span class="cb-dot">◆</span>
+        SIVIGLIA <span class="cb-dot">◆</span>
+        RIMINI <span class="cb-dot">◆</span>
+        PARIGI <span class="cb-dot">◆</span>
+        TUNISI <span class="cb-dot">◆</span>
+        OLHÃO <span class="cb-dot">◆</span>
+        UAE <span class="cb-dot">◆</span>
+        MALTA <span class="cb-dot">◆</span>
+        BUDAPEST <span class="cb-dot">◆</span>
+        MILANO <span class="cb-dot">◆</span>
+      </span>
+      <span class="cities-run" aria-hidden="true">
+        KOSOVO <span class="cb-dot">◆</span>
+        ABU DHABI <span class="cb-dot">◆</span>
+        DUBAI <span class="cb-dot">◆</span>
+        BARCELONA <span class="cb-dot">◆</span>
+        MADRID <span class="cb-dot">◆</span>
+        PALERMO <span class="cb-dot">◆</span>
+        SIVIGLIA <span class="cb-dot">◆</span>
+        RIMINI <span class="cb-dot">◆</span>
+        PARIGI <span class="cb-dot">◆</span>
+        TUNISI <span class="cb-dot">◆</span>
+        OLHÃO <span class="cb-dot">◆</span>
+        UAE <span class="cb-dot">◆</span>
+        MALTA <span class="cb-dot">◆</span>
+        BUDAPEST <span class="cb-dot">◆</span>
+        MILANO <span class="cb-dot">◆</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ═════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="footer-line" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="BXP" class="footer-logo" width="85" height="32" />
+        <p class="footer-tagline" data-i18n="footer.tagline">Connecting Sport. Creating Shared Value.</p>
+      </div>
+      <p class="footer-copy" data-i18n="footer.copy">© 2026 BXP. All rights reserved.</p>
+      <div class="footer-langs">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="i18n.js"></script>
+  <!-- Hero: terrain de foot interactif -->
+  <script src="hero-field.js"></script>
+  <!-- Process section: animation 3D orbital -->
+  <script src="threejs-process.js"></script>
+  <script src="gallery-carousel.js"></script>
+  <script src="sections-fx.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

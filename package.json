@@ -1,0 +1,17 @@
+{
+  "name": "bxp-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build-static.js",
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemailer": "^9.0.1",
+    "pdfkit": "^0.15.2",
+    "serverless-http": "^3.2.0"
+  }
+}

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="af.page.title">Athlete Contact Form – BXP</title>
+  <meta name="description" content="BXP athlete intake form — share your sporting profile and objectives." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="forms.css" />
+</head>
+<body class="fp-body">
+
+  <!-- ══ TOP BAR ══════════════════════════════════════════ -->
+  <header class="fp-bar">
+    <div class="fp-bar-inner">
+      <a href="index.html" class="fp-brand" aria-label="BXP Home">
+        <img src="assets/logo.png" alt="BXP" width="92" height="35" />
+      </a>
+      <div class="fp-bar-right">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+          <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+        </div>
+        <a href="index.html" class="fp-back" data-i18n="ff.back">Back to site</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="fp-main">
+    <div class="fp-head">
+      <span class="section-label gold-text" data-i18n="af.kicker">ATHLETE</span>
+      <h1 class="fp-title" data-i18n="af.title">Athlete Contact Form</h1>
+      <p class="fp-lead" data-i18n="af.intro">This form collects the main information about the athlete and helps identify the areas where BXP can concretely intervene. The initial analysis is the starting point. Services are only proposed afterwards if relevant and consistent with the athlete's needs, objectives and budget.</p>
+      <p class="fp-req-note" data-i18n="ff.required_note">Fields marked * are required.</p>
+    </div>
+
+    <form class="fp-form" id="athlete-form" novalidate>
+
+      <!-- ── SECTION 1 — Athlete information ── -->
+      <fieldset class="fp-section">
+        <legend class="fp-legend"><span class="fp-legend-num">01</span><span data-i18n="af.s1">Athlete Information</span></legend>
+
+        <div class="fp-grid">
+          <div class="fp-field">
+            <label for="af-name" data-i18n="af.name">Full name <span class="req" aria-hidden="true">*</span></label>
+            <input id="af-name" name="name" type="text" required autocomplete="name" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-dob" data-i18n="af.dob">Date of birth <span class="req" aria-hidden="true">*</span></label>
+            <input id="af-dob" name="dob" type="date" required />
+            <div class="field-line"></div>
+            <span class="fp-hint" data-i18n="af.dob.hint">If the athlete is a minor, also complete the parent/guardian section below.</span>
+            <span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-nat" data-i18n="af.nationality">Nationality <span class="req" aria-hidden="true">*</span></label>
+            <input id="af-nat" name="nationality" type="text" required />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-res" data-i18n="af.residence">Country and city of residence <span class="req" aria-hidden="true">*</span></label>
+            <input id="af-res" name="residence" type="text" required />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-phone" data-i18n="af.phone">Phone / WhatsApp <span class="req" aria-hidden="true">*</span></label>
+            <input id="af-phone" name="phone" type="tel" required autocomplete="tel" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-email" data-i18n="af.email">Email address <span class="req" aria-hidden="true">*</span></label>
+            <input id="af-email" name="email" type="email" required autocomplete="email" spellcheck="false" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-sport" data-i18n="af.sport">Sport practised <span class="req" aria-hidden="true">*</span></label>
+            <input id="af-sport" name="sport" type="text" required />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-pos" data-i18n="af.role">Role / position</label>
+            <input id="af-pos" name="position" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-dom" data-i18n="af.dominant">Dominant foot / hand</label>
+            <input id="af-dom" name="dominant" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field fp-field--half">
+            <label for="af-height" data-i18n="af.height">Height (cm)</label>
+            <input id="af-height" name="height" type="number" min="0" inputmode="numeric" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field fp-field--half">
+            <label for="af-weight" data-i18n="af.weight">Weight (kg)</label>
+            <input id="af-weight" name="weight" type="number" min="0" inputmode="numeric" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-team" data-i18n="af.current_team">Current team and country</label>
+            <input id="af-team" name="current_team" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-league" data-i18n="af.league">Current league / category</label>
+            <input id="af-league" name="league" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-prev" data-i18n="af.prev_teams">Previous teams</label>
+            <input id="af-prev" name="previous_teams" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-exp" data-i18n="af.exp_years">Years of competitive experience</label>
+            <input id="af-exp" name="experience_years" type="number" min="0" inputmode="numeric" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- ── SECTION 2 — Experience & objectives ── -->
+      <fieldset class="fp-section">
+        <legend class="fp-legend"><span class="fp-legend-num">02</span><span data-i18n="af.s2">Experience &amp; Objectives</span></legend>
+
+        <div class="fp-yn-row">
+          <span class="fp-q" data-i18n="af.abroad">Have you had sporting experiences abroad?</span>
+          <div class="yn" role="radiogroup" aria-label="abroad">
+            <label class="yn-opt"><input type="radio" name="abroad" value="yes" /><span data-i18n="ff.yes">Yes</span></label>
+            <label class="yn-opt"><input type="radio" name="abroad" value="no" /><span data-i18n="ff.no">No</span></label>
+          </div>
+        </div>
+
+        <div class="fp-group">
+          <span class="fp-q" data-i18n="af.goal">What is your objective?</span>
+          <div class="fp-checks">
+            <label class="fp-check"><input type="checkbox" name="goal" value="new_team" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.goal.team">Find a new team</span></label>
+            <label class="fp-check"><input type="checkbox" name="goal" value="abroad" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.goal.abroad">Have a sporting experience abroad</span></label>
+            <label class="fp-check"><input type="checkbox" name="goal" value="evaluation" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.goal.eval">Receive an evaluation of my level</span></label>
+            <label class="fp-check"><input type="checkbox" name="goal" value="trial" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.goal.trial">Find trial opportunities</span></label>
+          </div>
+        </div>
+
+        <div class="fp-grid">
+          <div class="fp-field">
+            <label for="af-avail" data-i18n="af.available">From when would you be available?</label>
+            <input id="af-avail" name="availability" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+        </div>
+
+        <div class="fp-yn-grid">
+          <div class="fp-yn-row">
+            <span class="fp-q" data-i18n="af.cv">Do you have an up-to-date sporting CV?</span>
+            <div class="yn" role="radiogroup" aria-label="cv">
+              <label class="yn-opt"><input type="radio" name="cv" value="yes" /><span data-i18n="ff.yes">Yes</span></label>
+              <label class="yn-opt"><input type="radio" name="cv" value="no" /><span data-i18n="ff.no">No</span></label>
+            </div>
+          </div>
+          <div class="fp-yn-row">
+            <span class="fp-q" data-i18n="af.video">Do you have highlight videos or full matches?</span>
+            <div class="yn" role="radiogroup" aria-label="video">
+              <label class="yn-opt"><input type="radio" name="video" value="yes" /><span data-i18n="ff.yes">Yes</span></label>
+              <label class="yn-opt"><input type="radio" name="video" value="no" /><span data-i18n="ff.no">No</span></label>
+            </div>
+          </div>
+          <div class="fp-yn-row">
+            <span class="fp-q" data-i18n="af.docs">Do you have other documents, photos or sporting material?</span>
+            <div class="yn" role="radiogroup" aria-label="docs">
+              <label class="yn-opt"><input type="radio" name="material" value="yes" /><span data-i18n="ff.yes">Yes</span></label>
+              <label class="yn-opt"><input type="radio" name="material" value="no" /><span data-i18n="ff.no">No</span></label>
+            </div>
+          </div>
+          <div class="fp-yn-row">
+            <span class="fp-q" data-i18n="af.contract">Are you currently under contract with a club?</span>
+            <div class="yn" role="radiogroup" aria-label="contract">
+              <label class="yn-opt"><input type="radio" name="contract" value="yes" /><span data-i18n="ff.yes">Yes</span></label>
+              <label class="yn-opt"><input type="radio" name="contract" value="no" /><span data-i18n="ff.no">No</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="fp-grid">
+          <div class="fp-field">
+            <label for="af-links" data-i18n="af.links">Video links or sporting profiles</label>
+            <input id="af-links" name="links" type="url" inputmode="url" autocomplete="url" spellcheck="false" placeholder="https://…" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+        </div>
+
+        <div class="fp-yn-row">
+          <span class="fp-q" data-i18n="af.agent">Do you have an agent, manager or representative?</span>
+          <div class="yn" role="radiogroup" aria-label="agent">
+            <label class="yn-opt"><input type="radio" name="agent" value="yes" data-reveal="af-agent-who" /><span data-i18n="ff.yes">Yes</span></label>
+            <label class="yn-opt"><input type="radio" name="agent" value="no" data-reveal="af-agent-who" data-reveal-hide="true" /><span data-i18n="ff.no">No</span></label>
+          </div>
+        </div>
+        <div class="fp-grid fp-conditional" id="af-agent-who" hidden>
+          <div class="fp-field">
+            <label for="af-who" data-i18n="af.agent.who">Who?</label>
+            <input id="af-who" name="agent_name" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+        </div>
+
+        <div class="fp-grid">
+          <div class="fp-field">
+            <label for="af-sit" data-i18n="af.situation">Briefly tell us your current situation and what you are looking for</label>
+            <textarea id="af-sit" name="situation" rows="4"></textarea>
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+        </div>
+
+        <div class="fp-group">
+          <span class="fp-q" data-i18n="af.source">How did you hear about BXP?</span>
+          <div class="fp-checks fp-checks--inline">
+            <label class="fp-check"><input type="checkbox" name="source" value="instagram" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text">Instagram</span></label>
+            <label class="fp-check"><input type="checkbox" name="source" value="tiktok" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text">TikTok</span></label>
+            <label class="fp-check"><input type="checkbox" name="source" value="linkedin" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text">LinkedIn</span></label>
+            <label class="fp-check"><input type="checkbox" name="source" value="google" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text">Google</span></label>
+            <label class="fp-check"><input type="checkbox" name="source" value="word_of_mouth" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.source.wom">Word of mouth</span></label>
+            <label class="fp-check"><input type="checkbox" name="source" value="club_coach" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.source.club">Club / coach</span></label>
+            <label class="fp-check"><input type="checkbox" name="source" value="other" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.source.other">Other</span></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- ── MINOR TOGGLE ── -->
+      <div class="fp-minor-toggle">
+        <label class="fp-check fp-check--lg">
+          <input type="checkbox" id="af-is-minor" data-reveal="af-minor" />
+          <span class="fp-check-box" aria-hidden="true"></span>
+          <span class="fp-check-text" data-i18n="af.minor.toggle">The athlete is a minor — open the parent / legal guardian section</span>
+        </label>
+      </div>
+
+      <!-- ── SECTION 3 — Minor / parent ── -->
+      <fieldset class="fp-section fp-conditional" id="af-minor" hidden>
+        <legend class="fp-legend"><span class="fp-legend-num">03</span><span data-i18n="af.minor.s">Minor Athlete — Parent / Legal Guardian</span></legend>
+
+        <div class="fp-grid">
+          <div class="fp-field">
+            <label for="af-pname" data-i18n="af.minor.pname">Parent / legal guardian full name</label>
+            <input id="af-pname" name="parent_name" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-prel" data-i18n="af.minor.rel">Relationship to the athlete</label>
+            <select id="af-prel" name="parent_relationship">
+              <option value="" data-i18n="ff.select">— Select —</option>
+              <option value="father" data-i18n="af.minor.rel.father">Father</option>
+              <option value="mother" data-i18n="af.minor.rel.mother">Mother</option>
+              <option value="guardian" data-i18n="af.minor.rel.guardian">Legal guardian</option>
+              <option value="other" data-i18n="af.source.other">Other</option>
+            </select>
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-pphone" data-i18n="af.minor.phone">Parent / guardian phone / WhatsApp</label>
+            <input id="af-pphone" name="parent_phone" type="tel" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-pemail" data-i18n="af.minor.email">Parent / guardian email</label>
+            <input id="af-pemail" name="parent_email" type="email" autocomplete="email" spellcheck="false" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+        </div>
+
+        <div class="fp-yn-row">
+          <span class="fp-q" data-i18n="af.minor.informed">Is the parent / legal guardian aware of the application sent by the athlete?</span>
+          <div class="yn" role="radiogroup" aria-label="informed">
+            <label class="yn-opt"><input type="radio" name="parent_informed" value="yes" /><span data-i18n="ff.yes">Yes</span></label>
+            <label class="yn-opt"><input type="radio" name="parent_informed" value="no" /><span data-i18n="ff.no">No</span></label>
+          </div>
+        </div>
+
+        <p class="fp-subhead" data-i18n="af.minor.s2">Privacy Consent for Minor Athlete</p>
+        <div class="fp-checks">
+          <label class="fp-check"><input type="checkbox" name="minor_consent" value="guardian" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.minor.p1">I declare that I am the parent or legal guardian of the minor athlete indicated in this form.</span></label>
+          <label class="fp-check"><input type="checkbox" name="minor_consent" value="processing" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.minor.p2">I authorise BXP to process the minor athlete's personal data for contact, initial sporting evaluation and athletic profile analysis.</span></label>
+          <label class="fp-check"><input type="checkbox" name="minor_consent" value="material" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.minor.p3">I authorise BXP to review the sporting material sent, including sporting CV, videos, photos, links, sporting profiles and documents useful for evaluating the athlete.</span></label>
+          <label class="fp-check"><input type="checkbox" name="minor_consent" value="contact" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.minor.p4">I authorise BXP to contact me and/or the minor athlete via the details provided for opportunities consistent with their profile, age, sporting level and availability.</span></label>
+          <label class="fp-check"><input type="checkbox" name="minor_consent" value="accuracy" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.minor.p5">I confirm that all the information entered in the form is correct and that the application is submitted with the consent of the parent or legal guardian.</span></label>
+          <label class="fp-check"><input type="checkbox" name="minor_consent" value="newsletter" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.minor.news">I would like to receive updates on BXP services, sporting opportunities and initiatives.</span></label>
+        </div>
+
+        <div class="fp-grid">
+          <div class="fp-field">
+            <label for="af-pdate" data-i18n="af.minor.date">Date</label>
+            <input id="af-pdate" name="parent_date" type="date" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="af-psign" data-i18n="af.minor.sign">Signature / digital confirmation of parent or legal guardian</label>
+            <input id="af-psign" name="parent_signature" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- ── SECTION — Privacy ── -->
+      <fieldset class="fp-section">
+        <legend class="fp-legend"><span class="fp-legend-num fp-legend-num--gold">★</span><span data-i18n="af.s3">Privacy Consent</span></legend>
+        <div class="fp-checks">
+          <label class="fp-check"><input type="checkbox" name="privacy" value="processing" required /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text"><span data-i18n="af.privacy1">I authorise the processing of my personal data to be contacted by BXP and to receive an initial sporting evaluation.</span> <span class="req" aria-hidden="true">*</span></span></label>
+          <label class="fp-check"><input type="checkbox" name="privacy" value="material" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.privacy2">I authorise BXP to review the sporting material sent and to contact me for opportunities consistent with my profile.</span></label>
+          <label class="fp-check"><input type="checkbox" name="privacy" value="newsletter" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="af.privacy3">I would like to receive updates on BXP services, sporting opportunities and initiatives.</span></label>
+          <span class="field-err" role="alert" id="af-consent-err"></span>
+        </div>
+      </fieldset>
+
+      <div class="fp-actions">
+        <button type="submit" class="submit-btn" id="af-submit">
+          <span class="btn-text" data-i18n="ff.submit">Submit</span>
+          <span class="btn-loader" style="display:none">
+            <svg width="18" height="18" viewBox="0 0 18 18" class="spin" aria-hidden="true"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2" stroke-dasharray="32" stroke-dashoffset="8" fill="none"/></svg>
+          </span>
+          <span class="btn-shine"></span>
+        </button>
+        <div class="form-success" id="af-success" role="status" aria-live="polite" style="display:none" data-i18n="ff.success">Thank you. Your form has been received — we'll be in touch soon.</div>
+      </div>
+    </form>
+  </main>
+
+  <footer class="fp-foot">
+    <p class="footer-copy" data-i18n="footer.copy">© 2026 BXP. All rights reserved.</p>
+  </footer>
+
+  <script src="forms-i18n.js"></script>
+  <script src="forms.js"></script>
+</body>
+</html>

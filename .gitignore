@@ -1,0 +1,12 @@
+.env
+node_modules/
+dist/
+submissions/
+
+# Local Netlify folder
+.netlify
+
+# Claude / agent tooling
+.claude/
+.agents/
+skills-lock.json

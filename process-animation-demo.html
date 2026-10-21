@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Our Process — Orbital 3D Animation</title>
+<style>
+  :root{
+    --bg-2:#0b0c10;
+  }
+  html,body{margin:0;background:var(--bg-2);color:#fff;font-family:sans-serif;}
+
+  /* ─── PROCESS ────────────────────────────────────────── */
+  #process{
+    padding:120px 0;
+    background:var(--bg-2);
+    position:relative;
+    overflow:hidden;
+    min-height:900px;
+  }
+  /* Canvas Three.js orbital — ancré en haut, hauteur fixe */
+  .process-3d-canvas{
+    position:absolute;
+    top:0;left:0;
+    width:100% !important;
+    height:clamp(600px, 80vh, 960px) !important;
+    pointer-events:none;
+    z-index:0;
+    opacity:0.88;
+  }
+  /* Dégradés haut/bas pour fondre le 3D */
+  #process::before,
+  #process::after{
+    content:'';
+    position:absolute;
+    left:0;right:0;
+    height:160px;
+    pointer-events:none;
+    z-index:1;
+  }
+  #process::before{
+    top:0;
+    background:linear-gradient(to bottom,var(--bg-2) 0%,transparent 100%);
+  }
+  #process::after{
+    bottom:0;
+    background:linear-gradient(to top,var(--bg-2) 0%,transparent 100%);
+  }
+  /* Contenu au-dessus du canvas */
+  #process .section-header{
+    position:relative;
+    z-index:2;
+    text-align:center;
+  }
+  @media (max-width:768px){
+    #process{ padding-top:clamp(190px,28svh,250px); }
+    .process-3d-canvas{
+      height:clamp(620px,82svh,760px) !important;
+      opacity:.96;
+    }
+    #process::before{height:100px}
+  }
+</style>
+</head>
+<body>
+
+  <section id="process">
+    <div class="section-header">
+      <h2>Our Process</h2>
+    </div>
+  </section>
+
+  <!-- Three.js r134 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="threejs-process.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="cf.page.title">Club Contact Form – BXP</title>
+  <meta name="description" content="BXP club intake form — preliminary club assessment." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="forms.css" />
+</head>
+<body class="fp-body">
+
+  <!-- ══ TOP BAR ══════════════════════════════════════════ -->
+  <header class="fp-bar">
+    <div class="fp-bar-inner">
+      <a href="index.html" class="fp-brand" aria-label="BXP Home">
+        <img src="assets/logo.png" alt="BXP" width="92" height="35" />
+      </a>
+      <div class="fp-bar-right">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+          <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+        </div>
+        <a href="index.html" class="fp-back" data-i18n="ff.back">Back to site</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="fp-main">
+    <div class="fp-head">
+      <span class="section-label silver-text" data-i18n="cf.kicker">CLUB</span>
+      <h1 class="fp-title" data-i18n="cf.title">Club Contact Form</h1>
+      <p class="fp-subtitle" data-i18n="cf.subtitle">Preliminary club assessment</p>
+      <p class="fp-lead" data-i18n="cf.intro">This form collects the main information about the club and helps identify the areas where BXP can concretely intervene. The initial analysis is the starting point. Services are only proposed afterwards if relevant and consistent with the club's needs, objectives and budget.</p>
+      <p class="fp-req-note" data-i18n="ff.required_note">Fields marked * are required.</p>
+    </div>
+
+    <form class="fp-form" id="club-form" novalidate>
+
+      <!-- ── SECTION 1 — General data ── -->
+      <fieldset class="fp-section">
+        <legend class="fp-legend"><span class="fp-legend-num">01</span><span data-i18n="cf.s1">General Club Information</span></legend>
+        <div class="fp-grid">
+          <div class="fp-field">
+            <label for="cf-name" data-i18n="cf.name">Club name <span class="req" aria-hidden="true">*</span></label>
+            <input id="cf-name" name="club_name" type="text" required autocomplete="organization" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="cf-cat" data-i18n="cf.category">Category / League</label>
+            <input id="cf-cat" name="category" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="cf-city" data-i18n="cf.city">Municipality / location</label>
+            <input id="cf-city" name="city" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="cf-pres" data-i18n="cf.president">President</label>
+            <input id="cf-pres" name="president" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="cf-ref" data-i18n="cf.ref">Role and operational contact</label>
+            <input id="cf-ref" name="contact_ref" type="text" autocomplete="name" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="cf-phone" data-i18n="cf.phone">Phone number <span class="req" aria-hidden="true">*</span></label>
+            <input id="cf-phone" name="phone" type="tel" required autocomplete="tel" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="cf-email" data-i18n="cf.email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input id="cf-email" name="email" type="email" required autocomplete="email" spellcheck="false" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field">
+            <label for="cf-pitch" data-i18n="cf.field">Main pitch / venue</label>
+            <input id="cf-pitch" name="main_pitch" type="text" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field fp-field--half">
+            <label for="cf-teams" data-i18n="cf.teams">Number of active teams</label>
+            <input id="cf-teams" name="active_teams" type="number" min="0" inputmode="numeric" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+          <div class="fp-field fp-field--half">
+            <label for="cf-season" data-i18n="cf.season">Reference sports season</label>
+            <input id="cf-season" name="season" type="text" placeholder="2025/2026" />
+            <div class="field-line"></div><span class="field-err" role="alert"></span>
+          </div>
+        </div>
+
+        <div class="fp-yn-row">
+          <span class="fp-q" data-i18n="cf.youth">Youth sector present?</span>
+          <div class="yn" role="radiogroup" aria-label="youth">
+            <label class="yn-opt"><input type="radio" name="youth" value="yes" /><span data-i18n="ff.yes">Yes</span></label>
+            <label class="yn-opt"><input type="radio" name="youth" value="no" /><span data-i18n="ff.no">No</span></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- ── SECTION 2 — Current situation ── -->
+      <fieldset class="fp-section">
+        <legend class="fp-legend"><span class="fp-legend-num">02</span><span data-i18n="cf.s2">Current Situation of the Club</span></legend>
+
+        <div class="fp-qa">
+          <div class="fp-qa-item">
+            <span class="fp-qa-label" data-i18n="cf.struct">Corporate structure</span>
+            <label class="fp-qa-field"><span class="fp-qa-q" data-i18n="cf.struct.q">Does the club have clear roles between president, sporting director, coach, staff and managers?</span>
+              <input name="structure" type="text" /><div class="field-line"></div></label>
+          </div>
+          <div class="fp-qa-item">
+            <span class="fp-qa-label" data-i18n="cf.firstteam">First team</span>
+            <label class="fp-qa-field"><span class="fp-qa-q" data-i18n="cf.firstteam.q">What is the sporting objective of the season?</span>
+              <input name="first_team" type="text" /><div class="field-line"></div></label>
+          </div>
+          <div class="fp-qa-item">
+            <span class="fp-qa-label" data-i18n="cf.squad">Squad</span>
+            <label class="fp-qa-field"><span class="fp-qa-q" data-i18n="cf.squad.q">How many players make up the squad?</span>
+              <input name="squad" type="text" /><div class="field-line"></div></label>
+          </div>
+          <div class="fp-qa-item">
+            <span class="fp-qa-label" data-i18n="cf.staff">Technical staff</span>
+            <label class="fp-qa-field"><span class="fp-qa-q" data-i18n="cf.staff.q">How many people make up the staff?</span>
+              <input name="staff" type="text" /><div class="field-line"></div></label>
+          </div>
+          <div class="fp-qa-item">
+            <span class="fp-qa-label" data-i18n="cf.method">Working method</span>
+            <label class="fp-qa-field"><span class="fp-qa-q" data-i18n="cf.method.q">Is there a shared technical methodology?</span>
+              <input name="method" type="text" /><div class="field-line"></div></label>
+          </div>
+          <div class="fp-qa-item">
+            <span class="fp-qa-label" data-i18n="cf.budget">Budget</span>
+            <label class="fp-qa-field"><span class="fp-qa-q" data-i18n="cf.budget.q">Does the club have a defined annual budget?</span>
+              <input name="budget" type="text" /><div class="field-line"></div></label>
+          </div>
+          <div class="fp-qa-item">
+            <span class="fp-qa-label" data-i18n="cf.sponsor">Sponsors</span>
+            <label class="fp-qa-field"><span class="fp-qa-q" data-i18n="cf.sponsor.q">Does the club have active sponsors? How many?</span>
+              <input name="sponsor" type="text" /><div class="field-line"></div></label>
+          </div>
+          <div class="fp-qa-item">
+            <span class="fp-qa-label" data-i18n="cf.comm">Communication</span>
+            <label class="fp-qa-field"><span class="fp-qa-q" data-i18n="cf.comm.q">Does the club use social media, a website or a digital channel?</span>
+              <input name="communication" type="text" /><div class="field-line"></div></label>
+          </div>
+          <div class="fp-qa-item">
+            <span class="fp-qa-label" data-i18n="cf.kit">Kit / apparel</span>
+            <label class="fp-qa-field"><span class="fp-qa-q" data-i18n="cf.kit.q">Does the club have a personalised technical line?</span>
+              <input name="kit" type="text" /><div class="field-line"></div></label>
+          </div>
+          <div class="fp-qa-item">
+            <span class="fp-qa-label" data-i18n="cf.events">Events</span>
+            <label class="fp-qa-field"><span class="fp-qa-q" data-i18n="cf.events.q">Does the club organise events, dinners, tournaments or sponsor evenings?</span>
+              <input name="events" type="text" /><div class="field-line"></div></label>
+          </div>
+          <div class="fp-qa-item">
+            <span class="fp-qa-label" data-i18n="cf.collab">Collaborations</span>
+            <label class="fp-qa-field"><span class="fp-qa-q" data-i18n="cf.collab.q">Does the club have relationships with other clubs, academies or external partners?</span>
+              <input name="collaborations" type="text" /><div class="field-line"></div></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- ── SECTION 3 — Objectives ── -->
+      <fieldset class="fp-section">
+        <legend class="fp-legend"><span class="fp-legend-num">03</span><span data-i18n="cf.s3">Club Objectives</span></legend>
+        <p class="fp-subhead" data-i18n="cf.o.legend">Rate the priority of each objective.</p>
+
+        <div class="fp-prio-head" aria-hidden="true">
+          <span></span>
+          <span data-i18n="ff.low">Low</span>
+          <span data-i18n="ff.medium">Medium</span>
+          <span data-i18n="ff.high">High</span>
+        </div>
+
+        <div class="fp-prio-list">
+          <div class="fp-prio"><span class="fp-prio-label" data-i18n="cf.o.org">Improve internal organisation</span>
+            <div class="seg" role="radiogroup" aria-label="org">
+              <label><input type="radio" name="o_org" value="low" /><span data-i18n="ff.low">Low</span></label>
+              <label><input type="radio" name="o_org" value="medium" /><span data-i18n="ff.medium">Medium</span></label>
+              <label><input type="radio" name="o_org" value="high" /><span data-i18n="ff.high">High</span></label>
+            </div></div>
+          <div class="fp-prio"><span class="fp-prio-label" data-i18n="cf.o.method">Improve the technical method</span>
+            <div class="seg" role="radiogroup" aria-label="method">
+              <label><input type="radio" name="o_method" value="low" /><span data-i18n="ff.low">Low</span></label>
+              <label><input type="radio" name="o_method" value="medium" /><span data-i18n="ff.medium">Medium</span></label>
+              <label><input type="radio" name="o_method" value="high" /><span data-i18n="ff.high">High</span></label>
+            </div></div>
+          <div class="fp-prio"><span class="fp-prio-label" data-i18n="cf.o.revenue">Increase sponsors and revenue</span>
+            <div class="seg" role="radiogroup" aria-label="revenue">
+              <label><input type="radio" name="o_revenue" value="low" /><span data-i18n="ff.low">Low</span></label>
+              <label><input type="radio" name="o_revenue" value="medium" /><span data-i18n="ff.medium">Medium</span></label>
+              <label><input type="radio" name="o_revenue" value="high" /><span data-i18n="ff.high">High</span></label>
+            </div></div>
+          <div class="fp-prio"><span class="fp-prio-label" data-i18n="cf.o.image">Improve image and communication</span>
+            <div class="seg" role="radiogroup" aria-label="image">
+              <label><input type="radio" name="o_image" value="low" /><span data-i18n="ff.low">Low</span></label>
+              <label><input type="radio" name="o_image" value="medium" /><span data-i18n="ff.medium">Medium</span></label>
+              <label><input type="radio" name="o_image" value="high" /><span data-i18n="ff.high">High</span></label>
+            </div></div>
+          <div class="fp-prio"><span class="fp-prio-label" data-i18n="cf.o.kit">Create personalised kit / apparel</span>
+            <div class="seg" role="radiogroup" aria-label="kit">
+              <label><input type="radio" name="o_kit" value="low" /><span data-i18n="ff.low">Low</span></label>
+              <label><input type="radio" name="o_kit" value="medium" /><span data-i18n="ff.medium">Medium</span></label>
+              <label><input type="radio" name="o_kit" value="high" /><span data-i18n="ff.high">High</span></label>
+            </div></div>
+          <div class="fp-prio"><span class="fp-prio-label" data-i18n="cf.o.players">Develop the players</span>
+            <div class="seg" role="radiogroup" aria-label="players">
+              <label><input type="radio" name="o_players" value="low" /><span data-i18n="ff.low">Low</span></label>
+              <label><input type="radio" name="o_players" value="medium" /><span data-i18n="ff.medium">Medium</span></label>
+              <label><input type="radio" name="o_players" value="high" /><span data-i18n="ff.high">High</span></label>
+            </div></div>
+          <div class="fp-prio"><span class="fp-prio-label" data-i18n="cf.o.events">Create events and commercial activities</span>
+            <div class="seg" role="radiogroup" aria-label="comm-events">
+              <label><input type="radio" name="o_events" value="low" /><span data-i18n="ff.low">Low</span></label>
+              <label><input type="radio" name="o_events" value="medium" /><span data-i18n="ff.medium">Medium</span></label>
+              <label><input type="radio" name="o_events" value="high" /><span data-i18n="ff.high">High</span></label>
+            </div></div>
+          <div class="fp-prio"><span class="fp-prio-label" data-i18n="cf.o.collab">Activate external collaborations</span>
+            <div class="seg" role="radiogroup" aria-label="ext-collab">
+              <label><input type="radio" name="o_collab" value="low" /><span data-i18n="ff.low">Low</span></label>
+              <label><input type="radio" name="o_collab" value="medium" /><span data-i18n="ff.medium">Medium</span></label>
+              <label><input type="radio" name="o_collab" value="high" /><span data-i18n="ff.high">High</span></label>
+            </div></div>
+          <div class="fp-prio"><span class="fp-prio-label" data-i18n="cf.o.legal">Improve legal / insurance management</span>
+            <div class="seg" role="radiogroup" aria-label="legal">
+              <label><input type="radio" name="o_legal" value="low" /><span data-i18n="ff.low">Low</span></label>
+              <label><input type="radio" name="o_legal" value="medium" /><span data-i18n="ff.medium">Medium</span></label>
+              <label><input type="radio" name="o_legal" value="high" /><span data-i18n="ff.high">High</span></label>
+            </div></div>
+        </div>
+      </fieldset>
+
+      <!-- ── SECTION — Privacy ── -->
+      <fieldset class="fp-section">
+        <legend class="fp-legend"><span class="fp-legend-num fp-legend-num--gold">★</span><span data-i18n="cf.s4">Privacy Consent</span></legend>
+        <div class="fp-checks">
+          <label class="fp-check"><input type="checkbox" name="privacy" value="processing" required /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text"><span data-i18n="cf.privacy1">I authorise the processing of the club's data to be contacted by BXP and to receive an initial assessment.</span> <span class="req" aria-hidden="true">*</span></span></label>
+          <label class="fp-check"><input type="checkbox" name="privacy" value="newsletter" /><span class="fp-check-box" aria-hidden="true"></span><span class="fp-check-text" data-i18n="cf.privacy2">I would like to receive updates on BXP services, opportunities and initiatives.</span></label>
+          <span class="field-err" role="alert" id="cf-consent-err"></span>
+        </div>
+      </fieldset>
+
+      <div class="fp-actions">
+        <button type="submit" class="submit-btn" id="cf-submit">
+          <span class="btn-text" data-i18n="ff.submit">Submit</span>
+          <span class="btn-loader" style="display:none">
+            <svg width="18" height="18" viewBox="0 0 18 18" class="spin" aria-hidden="true"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2" stroke-dasharray="32" stroke-dashoffset="8" fill="none"/></svg>
+          </span>
+          <span class="btn-shine"></span>
+        </button>
+        <div class="form-success" id="cf-success" role="status" aria-live="polite" style="display:none" data-i18n="ff.success">Thank you. Your form has been received — we'll be in touch soon.</div>
+      </div>
+    </form>
+  </main>
+
+  <footer class="fp-foot">
+    <p class="footer-copy" data-i18n="footer.copy">© 2026 BXP. All rights reserved.</p>
+  </footer>
+
+  <script src="forms-i18n.js"></script>
+  <script src="forms.js"></script>
+</body>
+</html>
